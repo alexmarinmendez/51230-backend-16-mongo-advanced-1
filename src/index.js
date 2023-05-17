@@ -27,7 +27,8 @@ const main = async() => {
     // const result = await studentModel.updateOne({ _id: '6464e33241b82ebbbb9c7e05'}, student)
     // console.log(result)
 
-    const student = await studentModel.findOne({ _id: "6464e33241b82ebbbb9c7e05"}).populate('courses.course')
+    // const student = await studentModel.findOne({ _id: "6464e33241b82ebbbb9c7e05"}).populate('courses.course')
+    const student = await studentModel.findOne({ _id: "6464e33241b82ebbbb9c7e05"})
     console.log(JSON.stringify(student, null, '\t'))
 }
 

@@ -16,5 +16,9 @@ const studentSchema = mongoose.Schema({
     }
 })
 
+studentSchema.pre('findOne', function() {
+    this.populate('courses.course')
+})
+
 const studentModel = mongoose.model('students', studentSchema)
 export default studentModel
